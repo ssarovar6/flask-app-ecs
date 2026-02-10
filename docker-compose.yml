@@ -3,5 +3,5 @@ services:
         image: python:latest
         container_name: flask-container
    ports: 
-   - 8000:3000
+   - 80:80
   
