@@ -1,7 +1,7 @@
 services:
-   flaskapp:
-        image: python:latest
-        container_name: flask-container
-   ports: 
-   - 80:80
+   flask-app:
+     image: app-image:latest
+     container_name: flask-container
+     ports: 
+     - "80:80"
   
