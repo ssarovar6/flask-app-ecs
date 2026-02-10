@@ -1,0 +1,6 @@
+services:
+   flaskapp:
+        image: python:latest
+        container_name: flask-container
+        ports: "80:80"
+  
