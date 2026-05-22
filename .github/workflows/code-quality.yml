@@ -1,6 +1,7 @@
 name: Code scan
 on: 
   workflow_call:
+  
 jobs:
   validate:
     runs-on: ubuntu-latest

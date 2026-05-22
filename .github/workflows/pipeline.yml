@@ -1,6 +1,7 @@
 name: Pipeline
 on:
   workflow_dispatch:
+  
 jobs:
   code-scan:
     uses: ./.github/workflows/code-quality.yml
