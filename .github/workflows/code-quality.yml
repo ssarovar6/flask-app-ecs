@@ -1,7 +1,6 @@
 name: Code Quality
 on: 
-  push:
-    branches: [dev]
+  workflow_dispatch:
 jobs:
   validate:
     runs-on: ubuntu-latest
