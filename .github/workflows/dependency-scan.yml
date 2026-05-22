@@ -1,7 +1,6 @@
 name: Dependency scan
 on:
-  push:
-    branches: [dev]
+  workflow_call:
 jobs:
   dependency-check:
     runs-on: ubuntu-latest
