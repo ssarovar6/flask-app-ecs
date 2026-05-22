@@ -1,14 +1,14 @@
 name: Code scan
 on: 
   workflow_call:
-  
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
       matrix:
-        python-version: ["3.13","3.14"]
+        python-version: ["3.14"]
     steps:
       - name: Code checkout
         uses: actions/checkout@v4
