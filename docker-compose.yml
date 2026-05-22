@@ -1,7 +1,8 @@
 services:
    flask-app:
-     image: app-image:latest
+     image: ${DOCKERHUB_USERNAME}/flask-app:${DOCKER_TAG}
      container_name: flask-container
+     restart: always
      ports: 
      - "80:80"
   
