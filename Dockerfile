@@ -12,7 +12,7 @@ COPY . .
 
 # Run the build commands
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache -r requirements.txt
 
 # expose port 80
 
