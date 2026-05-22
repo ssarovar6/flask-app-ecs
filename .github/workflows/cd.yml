@@ -17,7 +17,7 @@ jobs:
           host: ${{ secrets.EC2_SSH_HOST }}
           username: ${{ secrets.EC2_SSH_USER }}
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
-          scripts: |
+          script: |
             echo "Install required package & folder"
             sudo apt update -y
             sudo apt install docker.io -y
@@ -38,7 +38,7 @@ jobs:
           host: ${{ secrets.EC2_SSH_HOST }}
           username: ${{ secrets.EC2_SSH_USER }}
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
-          scripts: |
+          script: |
             echo "Running APP"
             export DOCKERHUB_USERNAME= ${{ VARS.DOCKERHUB_USERNAME }}
             export DOCKER_TAG: ${{ github.sha }}
