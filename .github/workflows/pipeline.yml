@@ -1,0 +1,19 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+jobs:
+  code-scan:
+    uses: ./.github/workflows/code-quality.yml
+  secret-scan:
+    uses: ./.github/workflows/secret-scan.yml
+    secrets: inherit
+  dependency-scan:
+    uses: ./.github/workflows/dependency-scan.yml
+  build-job:
+    needs: [code-scan, secret-scan, dependency-scan]
+    uses: ./.github/workflows/docker-build-push.yml
+    secrets: inherit
+  deploy-job:
+    needs: [build-job]
+    uses: ./.github/workflows/cd.yml
+    secrets: inherit

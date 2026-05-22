@@ -5,8 +5,7 @@
 
 name: Image Build and Push
 on:
-  push:
-    branches: [dev]
+  workflow_call:
 jobs:
   build-push:
     runs-on: ubuntu-latest

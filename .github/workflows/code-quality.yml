@@ -1,4 +1,4 @@
-name: Code Quality
+name: Code scan
 on: 
   workflow_call:
 jobs:
